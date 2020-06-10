@@ -11,11 +11,11 @@ export const FooterComponent  = () => {
                 &copy; {new Date().getFullYear()} Vijay Mishra
                 </Nav>
                 <Nav className="nav navbar-nav ml-auto social-icon">
-                    <Nav.Link href="#" className="nav-link"><FaStackOverflow /></Nav.Link>
-                    <Nav.Link href="#" className="nav-link"><FaGithub /></Nav.Link>
-                    <Nav.Link href="#" className="nav-link"><FaLinkedin /></Nav.Link>
-                    <Nav.Link href="#" className="nav-link"><FaFacebook /></Nav.Link>
-                    <Nav.Link href="#" className="nav-link"><FaTwitter /></Nav.Link>
+                    <Nav.Link href="https://stackoverflow.com/users/6382704/vijay-mishra" target="_blank" className="nav-link"><FaStackOverflow /></Nav.Link>
+                    <Nav.Link href="https://github.com/vkm193" target="_blank" className="nav-link"><FaGithub /></Nav.Link>
+                    <Nav.Link href="https://www.linkedin.com/in/vijay-mishra-27934062/" target="_blank" className="nav-link"><FaLinkedin /></Nav.Link>
+                    <Nav.Link href="https://www.facebook.com/vkm139/" target="_blank" className="nav-link"><FaFacebook /></Nav.Link>
+                    <Nav.Link href="https://twitter.com/vkm193" target="_blank" className="nav-link"><FaTwitter /></Nav.Link>
                 </Nav>
             </Navbar>
             </div>

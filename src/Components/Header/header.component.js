@@ -20,15 +20,16 @@ export const HeaderComponent  = () => {
                         <Nav className="navbar-nav">
                             <Link to="/" className="nav-item nav-link active">Home</Link>
                             <Link to="/resume" className="nav-item nav-link">Resume</Link>
-                            <Link to="/project" className="nav-item nav-link">Project</Link>
+                            <Link to="/projects" className="nav-item nav-link">Projects</Link>
+                            <Link to="/skills" className="nav-item nav-link">Skills</Link>
                             <Link to="/connect" className="nav-item nav-link">Connect</Link>
                         </Nav>
                         <Nav className="navbar-nav ml-auto social-icon">
-                            <Nav.Link href="#" className="nav-link"><FaStackOverflow /></Nav.Link>
-                            <Nav.Link href="#" className="nav-link"><FaGithub /></Nav.Link>
-                            <Nav.Link href="#" className="nav-link"><FaLinkedin /></Nav.Link>
-                            <Nav.Link href="#" className="nav-link"><FaFacebook /></Nav.Link>
-                            <Nav.Link href="#" className="nav-link"><FaTwitter /></Nav.Link>
+                            <Nav.Link href="https://stackoverflow.com/users/6382704/vijay-mishra" target="_blank" className="nav-link"><FaStackOverflow /></Nav.Link>
+                            <Nav.Link href="https://github.com/vkm193" target="_blank" className="nav-link"><FaGithub /></Nav.Link>
+                            <Nav.Link href="https://www.linkedin.com/in/vijay-mishra-27934062/" target="_blank" className="nav-link"><FaLinkedin /></Nav.Link>
+                            <Nav.Link href="https://www.facebook.com/vkm139/" target="_blank" className="nav-link"><FaFacebook /></Nav.Link>
+                            <Nav.Link href="https://twitter.com/vkm193" target="_blank" className="nav-link"><FaTwitter /></Nav.Link>
                         </Nav>
                     </Nav>
                 </Nav>

@@ -1,8 +1,38 @@
 import React, { Component }  from 'react';
 import './resume.component.scss';
 import { Row, Col } from 'react-bootstrap';
+import { FaCloudDownloadAlt, FaGithub, FaFilePdf } from 'react-icons/fa';
 
-export const ResumeComponent  = () => {
+export class ResumeComponent extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            repos: []
+        }
+    }
+
+    componentDidMount(){
+        let repos = [];
+        let filterArray = ["vijaymishra"]
+        fetch("https://api.github.com/users/vkm193/repos").then(response => 
+        {
+            response.json().then(
+            (data) => {
+                if(data){
+                    data.forEach(item => {
+                        if(!filterArray.includes(item.name)){
+                            repos.push({id: item.id, name: item.name, url: item.html_url})
+                        }
+                    });
+                    this.setState({repos: repos});
+                }
+            }
+        )
+        .catch(error => console.log(error))
+        })
+        .catch(error => console.log(error));
+    }
+    render(){
         return (
             <div id="resume">
                 <section>
@@ -18,7 +48,7 @@ export const ResumeComponent  = () => {
                             <div className="sm-circle red-circle">Purpose Statement</div>
                             </Col>
                             <Col className="col-md-8">
-                                <p class="purpose-statement-text">
+                                <p className="purpose-statement-text">
                             Having {new Date().getFullYear() - 2014}+ years of experience in software development, maintenance and implementation with 
                             object-oriented design. Have worked on technologies like .NET framework with good knowledge of MVC, 
                             ASP.Net, C#.Net, jQuery, Angular, SQL Server for commercial application development. Eager to learn 
@@ -38,8 +68,8 @@ export const ResumeComponent  = () => {
                                         <div className="section-title">
                                             <span>Technical Consultant</span>
                                         </div>
-                                        <a href="https://www.healthlevel.com/" target="_blank"><h6>Health Level Inc.</h6></a>
-                                        <span class="tenure-text">(Jan 2020 to Present)</span>
+                                        <a href="https://www.healthlevel.com/" target="_blank" rel="noopener noreferrer"><h6>Health Level Inc.</h6></a>
+                                        <span className="tenure-text">(Jan 2020 to Present)</span>
                                         <div className="role-details">
                                             <ul className="dashed">
                                                 <li>
@@ -57,8 +87,8 @@ export const ResumeComponent  = () => {
                                         <div className="section-title">
                                             <span>Associate Lead Technology</span>
                                         </div>
-                                        <a href="https://www.nagarro.com/" target="_blank"><h6>Nagarro Software</h6></a>
-                                        <span class="tenure-text">(Apr 2018 to Jan 2020)</span>
+                                        <a href="https://www.nagarro.com/" target="_blank" rel="noopener noreferrer"><h6>Nagarro Software</h6></a>
+                                        <span className="tenure-text">(Apr 2018 to Jan 2020)</span>
                                         <div className="role-details">
                                             <ul className="dashed">
                                                 <li>
@@ -77,8 +107,8 @@ export const ResumeComponent  = () => {
                                         <div className="section-title">
                                             <span>Software Development Engineer</span>
                                         </div>
-                                        <a href="https://www.emtecinc.com/" target="_blank"><h6>Emtec Technologies Pvt. Ltd.</h6></a>
-                                        <span class="tenure-text">(Dec 2014 to Mar 2018)</span>
+                                        <a href="https://www.emtecinc.com/" target="_blank"  rel="noopener noreferrer"><h6>Emtec Technologies Pvt. Ltd.</h6></a>
+                                        <span className="tenure-text">(Dec 2014 to Mar 2018)</span>
                                         <div className="role-details">
                                             <ul className="dashed">
                                                 <li>
@@ -87,7 +117,7 @@ export const ResumeComponent  = () => {
                                                 </li>
                                                 <li>
                                                     <p>Co-ordination with US based Client&nbsp;
-                                                    <a href="https://www.coyote.com" target="_blank"></a><h6>Coyote</h6>. 
+                                                    <a href="https://www.coyote.com" target="_blank" rel="noopener noreferrer"></a><strong>Coyote</strong>. 
                                                     Taking requirement and analysis to suggest better approach.</p>
                                                 </li>
                                                 <li>
@@ -103,8 +133,8 @@ export const ResumeComponent  = () => {
                                         <div className="section-title">
                                             <span>Software Developer</span>
                                         </div>
-                                        <a href="http://fortytwo.co.in/" target="_blank"><h6>Fortytwo Software</h6></a>
-                                        <span class="tenure-text">(Nov 2013 to Nov 2014)</span>
+                                        <a href="http://fortytwo.co.in/" target="_blank" rel="noopener noreferrer"><h6>Fortytwo Software</h6></a>
+                                        <span className="tenure-text">(Nov 2013 to Nov 2014)</span>
                                         <div className="role-details">
                                             <ul className="dashed">
                                                 <li>
@@ -115,7 +145,8 @@ export const ResumeComponent  = () => {
                                     </section>
                                 </article>
                                 <section>
-                                    <p>Developed Blog for a travel blogger <a href="http://www.roohyatri.com/"><h6>Rooh Yatri</h6></a>.</p>
+                                    <p>Developed Blog for a travel blogger &nbsp; 
+                                    <a href="http://www.roohyatri.com/" target="_blank" rel="noopener noreferrer"><strong>Rooh Yatri</strong></a>.</p>
                                 </section>
                             </Col>
                         </Row>
@@ -139,8 +170,34 @@ export const ResumeComponent  = () => {
                         </article>
                     </Col>
                     <Col className="col-md-3">
+                        <section id="side-panel">
+                            <div className="file-details">
+                                <div className="section-title">
+                                    <span><FaFilePdf /> Download Resume</span>
+                                </div>
+                                <div className="download-file  side-item-inside">
+                                <a href="https://doc-0c-10-docs.googleusercontent.com/docs/securesc/q4l6619og4khdqt347pinf2jsvn4ts6b/7ri0tf07cgtnojgm5epg7d7k030sclcg/1591821375000/12075885254220225052/12075885254220225052/1EIl9GdkOpYDCE-nZpSuayn6zvxza_xGJ?e=download&authuser=1&nonce=lfbruqlre44ce&user=12075885254220225052&hash=u400baugjttvjq9u39c4tr0l8ueij5ek"
+                                    download="vijay-mishra" rel="noopener noreferrer">
+                                    <FaCloudDownloadAlt />
+                                </a>
+                                </div>
+                            </div>
+                            <div className="git-details side-item">
+                                {this.state.repos.length > 0 ?
+                                    <div className="section-title"><span><FaGithub /> GIT Repos</span></div> : ''
+                                }
+                                <ul>
+                                    {this.state.repos.length > 0 ? this.state.repos.map(repo => 
+                                        <li key={repo.id}>
+                                            <a href={repo.url} rel="noopener noreferrer">{repo.name}</a>
+                                        </li>
+                                    ): ''}
+                                </ul>
+                            </div>
+                        </section>
                     </Col>
                 </Row>
             </div>
         )
+    }
     }

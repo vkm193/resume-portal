@@ -1,4 +1,5 @@
 @import "./../../../settings.scss";
+
 #resume{
     .sm-circle{
         height: 175px;
@@ -8,7 +9,7 @@
         margin: 0 auto;
     }
     p{
-        font-size: 0.9em;
+        font-size: 0.8em;
         display: inline;
     }
     a{
@@ -43,5 +44,37 @@
     }
     #education{
         border-bottom: none;
+    }
+    #side-panel{
+        padding-left: 60px;
+    }
+    .side-item-inside{
+        margin-bottom: 0.5em;
+    }
+    .side-item{
+        margin-bottom: 1.5em;
+    }
+    .download-file{
+        font-size: 5em;
+        text-align: center;
+        transform: scale(2);
+        a{
+            &:hover{
+                color: $text-active-color;
+            }
+        }
+    }
+    .git-details{
+        ul{
+            padding-left: 0px;
+            font-size: 0.8em;
+            a{
+                color: $text-active-color;
+                &:hover{
+                    color: $secondary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }
