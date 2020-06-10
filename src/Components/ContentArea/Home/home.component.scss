@@ -1,0 +1,23 @@
+@import "./../../../settings.scss";
+
+#home{
+    .profile-pic{
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 420px;
+        width: 380px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-image: url("/vijay.jpg");
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(1);
+        &:hover{
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0);
+        }
+    }
+}

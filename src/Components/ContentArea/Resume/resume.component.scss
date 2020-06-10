@@ -1,0 +1,47 @@
+@import "./../../../settings.scss";
+#resume{
+    .sm-circle{
+        height: 175px;
+        width: 175px;
+    }
+    .col{
+        margin: 0 auto;
+    }
+    p{
+        font-size: 0.9em;
+        display: inline;
+    }
+    a{
+        color: $secondary-color;
+        &:hover{
+            text-decoration: underline; 
+        }
+    }
+    h6{
+        display: inline;
+    }
+    .tenure-text{
+        margin-left: 0.5em;
+    }
+    .role-details, #education{
+        ul {
+            margin: 0;
+          }
+          ul.dashed {
+            list-style-type: none;
+          }
+          ul.dashed > li {
+            text-indent: -5px;
+          }
+          ul.dashed > li:before {
+            content: "-";
+            text-indent: -5px;
+          }
+    }
+    #professional-snapshot article{
+        padding-bottom: 0px;
+    }
+    #education{
+        border-bottom: none;
+    }
+}

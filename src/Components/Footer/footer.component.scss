@@ -1,0 +1,20 @@
+@import "./../../settings.scss";
+
+#footer-area{
+    background-color: $primary-color;
+    nav{
+        border-top: 1px solid $border-color-lightgray;
+        font-size: 0.8em;
+    }
+    &:hover{
+        border-top: 1px solid $secondary-color;
+        color: $secondary-color;
+    }
+    .social-icon a{
+        color: $text-active-color;
+        &:hover{
+            color: $secondary-color;
+            text-decoration: underline;
+        }
+    }
+}
