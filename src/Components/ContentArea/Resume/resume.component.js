@@ -176,8 +176,8 @@ export class ResumeComponent extends Component {
                                     <span><FaFilePdf /> Download Resume</span>
                                 </div>
                                 <div className="download-file  side-item-inside">
-                                <a href="https://doc-0c-10-docs.googleusercontent.com/docs/securesc/q4l6619og4khdqt347pinf2jsvn4ts6b/7ri0tf07cgtnojgm5epg7d7k030sclcg/1591821375000/12075885254220225052/12075885254220225052/1EIl9GdkOpYDCE-nZpSuayn6zvxza_xGJ?e=download&authuser=1&nonce=lfbruqlre44ce&user=12075885254220225052&hash=u400baugjttvjq9u39c4tr0l8ueij5ek"
-                                    download="vijay-mishra" rel="noopener noreferrer">
+                                <a href="https://drive.google.com/uc?export=download&id=1EIl9GdkOpYDCE-nZpSuayn6zvxza_xGJ" 
+                                download="vijay-mishra" rel="noopener noreferrer">
                                     <FaCloudDownloadAlt />
                                 </a>
                                 </div>
