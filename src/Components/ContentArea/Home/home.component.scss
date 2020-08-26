@@ -3,8 +3,6 @@
 #home{
     .profile-pic{
         margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
         height: 420px;
         width: 380px;
         border-radius: 50%;
@@ -22,5 +20,12 @@
     }
     p{
         font-size: 0.8em;
+    }
+    #name-img{
+        height: 60px;
+        width: 312px;
+        background-image: url("/logo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }

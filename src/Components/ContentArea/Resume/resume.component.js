@@ -60,7 +60,7 @@ export class ResumeComponent extends Component {
                     <article id="professional-snapshot">
                         <Row>
                             <Col className="col-md-4">
-                            <div className="sm-circle red-circle">Professional Snapshot</div>
+                                <div className="sm-circle red-circle">Professional Snapshot</div>
                             </Col>
                             <Col className="col-md-8">
                                 <article>

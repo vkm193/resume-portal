@@ -9,7 +9,8 @@ export const HomeComponent = () => {
         <div id="home">
             <section>
                 <div>
-                    <h1>Vijay Mishra</h1>
+                    {/* <h1>Vijay Mishra</h1> */}
+                    <div id="name-img" alt="Vijay Mishra"></div>
                     <h6>Developer/Travel enthusiast</h6>
                 </div>
                 <Row>
@@ -29,7 +30,7 @@ export const HomeComponent = () => {
                         <Link to="/project" className="nav-item nav-link">
                             <div className="my-work sm-circle cyan-circle">&lt;My Work /&gt;</div>
                         </Link>
-                        <Link to="/resume#skills" className="nav-item nav-link">
+                        <Link to="/skills" className="nav-item nav-link">
                             <div className="my-skills sm-circle yellow-circle">&lt;My Skills /&gt;</div>
                         </Link>
                         </Row>

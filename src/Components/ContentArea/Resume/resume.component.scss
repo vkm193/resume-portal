@@ -1,6 +1,11 @@
 @import "./../../../settings.scss";
 
 #resume{
+    .col-md-9 .col{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     .sm-circle{
         height: 175px;
         width: 175px;
@@ -39,9 +44,11 @@
             text-indent: -5px;
           }
     }
-    #professional-snapshot article{
-        padding-bottom: 0px;
-    }
+    #professional-snapshot{
+        article{
+            padding-bottom: 0px;
+        }
+    } 
     #education{
         border-bottom: none;
     }

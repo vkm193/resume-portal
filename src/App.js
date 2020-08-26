@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import {BrowserRouter }from 'react-router-dom';
+import {BrowserRouter, HashRouter }from 'react-router-dom';
 import {HeaderComponent} from './Components/Header/header.component';
 import {FooterComponent} from './Components/Footer/footer.component';
 import {MainComponent} from './Components/ContentArea/Main/main.component';
 
 function App() {
   return (
-    <BrowserRouter >
+    <HashRouter >
       <div id="app">
         <HeaderComponent />
         <div className="container fluid app">
@@ -15,7 +15,7 @@ function App() {
         </div>
         <FooterComponent />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
